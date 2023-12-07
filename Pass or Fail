@@ -1,0 +1,11 @@
+# Simple if
+# Question:
+# Determine if a student has passed a subject based on their marks.
+# If marks are greater than or equal to 50, print "Pass", otherwise print "Fail".
+
+# Answer:
+marks = float(input("Enter your marks: "))
+if marks >= 50:
+    print("Pass")
+else:
+    print("Fail")
