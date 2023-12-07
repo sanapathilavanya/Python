@@ -1,0 +1,13 @@
+# Simple if
+# Question:
+# Check if a person's age falls into a specific range (0-12 for child, 13-19 for teenager, 20 and above for adult).
+# Print the corresponding age group.
+
+# Answer:
+age = int(input("Enter your age: "))
+if 0 <= age <= 12:
+    print("Child")
+elif 13 <= age <= 19:
+    print("Teenager")
+else:
+    print("Adult")
