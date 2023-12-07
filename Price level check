@@ -1,0 +1,13 @@
+# Simple if
+# Question:
+# Determine the category of a product based on its price.
+# If price is less than 100, print "Low", if it is between 100 and 500, print "Medium", otherwise print "High".
+
+# Answer:
+price = float(input("Enter the price of the product: "))
+if price < 100:
+    print("Low")
+elif 100 <= price <= 500:
+    print("Medium")
+else:
+    print("High")
