@@ -1,0 +1,10 @@
+# Simple if
+# Question:
+# Check if a given number is a positive, even integer. Print "Positive and even" if it is, otherwise print "Not positive and even".
+
+# Answer:
+number = int(input("Enter a number: "))
+if number > 0 and number % 2 == 0:
+    print("Positive and even")
+else:
+    print("Not positive and even")
