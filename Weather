@@ -1,0 +1,14 @@
+# Simple if
+# Question:
+# Determine the season based on the month. Print "Spring", "Summer", "Autumn", or "Winter" accordingly.
+
+# Answer:
+month = int(input("Enter the month (1-12): "))
+if 3 <= month <= 5:
+    print("Spring")
+elif 6 <= month <= 8:
+    print("Summer")
+elif 9 <= month <= 11:
+    print("Autumn")
+else:
+    print("Winter")
