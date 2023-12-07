@@ -1,0 +1,10 @@
+# Simple if
+# Question:
+# Check if a given character is an uppercase letter. Print "Uppercase" if it is, otherwise print "Not uppercase".
+
+# Answer:
+character = input("Enter a character: ")
+if character.isalpha() and character.isupper():
+    print("Uppercase")
+else:
+    print("Not uppercase")
