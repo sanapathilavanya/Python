@@ -1,0 +1,11 @@
+# Simple if
+# Question:
+# Determine if a given three-digit number is a palindrome.
+# Print "Palindrome" if it is, otherwise print "Not a palindrome".
+
+# Answer:
+number = int(input("Enter a three-digit number: "))
+if 100 <= number <= 999 and str(number) == str(number)[::-1]:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
