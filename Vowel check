@@ -1,0 +1,10 @@
+# Simple if
+# Question:
+# Check if a given character is a vowel. Print "Vowel" if it is, otherwise print "Not a vowel".
+
+# Answer:
+character = input("Enter a character: ")
+if character.lower() in ['a', 'e', 'i', 'o', 'u']:
+    print("Vowel")
+else:
+    print("Not a vowel")
