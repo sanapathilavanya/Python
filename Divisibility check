@@ -1,0 +1,10 @@
+# Simple if
+# Question:
+# Check if a given number is divisible by both 3 and 5. Print "Divisible by 3 and 5" if it is, otherwise print "Not divisible".
+
+# Answer:
+number = int(input("Enter a number: "))
+if number % 3 == 0 and number % 5 == 0:
+    print("Divisible by 3 and 5")
+else:
+    print("Not divisible")
