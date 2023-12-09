@@ -1,0 +1,11 @@
+# Simple if
+# Question:
+# Determine the eligibility of a person for a driving license based on their age.
+# Print "Eligible" if the age is 18 or above, otherwise print "Not eligible".
+
+# Answer:
+age = int(input("Enter your age: "))
+if age >= 18:
+    print("Eligible for a driving license")
+else:
+    print("Not eligible for a driving license")
