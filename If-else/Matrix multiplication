@@ -1,0 +1,22 @@
+# Challenge
+# Question:
+# Write a program to perform matrix multiplication for two given matrices.
+# Print the result.
+
+# Answer:
+def matrix_multiply(matrix1, matrix2):
+    result = [[0] * len(matrix2[0]) for _ in range(len(matrix1))]
+    for i in range(len(matrix1)):
+        for j in range(len(matrix2[0])):
+            for k in range(len(matrix2)):
+                result[i][j] += matrix1[i][k] * matrix2[k][j]
+    return result
+
+# Example matrices, you can modify these for testing
+matrix_A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+matrix_B = [[9, 8, 7], [6, 5, 4], [3, 2, 1]]
+
+matrix_result = matrix_multiply(matrix_A, matrix_B)
+print("The result of matrix multiplication is:")
+for row in matrix_result:
+    print(row)
