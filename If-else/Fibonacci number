@@ -1,0 +1,14 @@
+# Challenge
+# Question:
+# Implement a program to find the n-th Fibonacci number using recursion.
+# Print the result.
+
+# Answer:
+def fibonacci_recursive(n):
+    if n <= 1:
+        return n
+    return fibonacci_recursive(n - 1) + fibonacci_recursive(n - 2)
+
+term = int(input("Enter the term for Fibonacci sequence: "))
+fibonacci_result = fibonacci_recursive(term)
+print(f"The {term}-th Fibonacci number is: {fibonacci_result}")
