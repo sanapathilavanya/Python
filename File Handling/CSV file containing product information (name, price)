@@ -1,0 +1,27 @@
+# Challenge
+# Question:
+# Implement a program that reads a CSV file containing product information (name, price).
+# Find and print the product with the highest price.
+
+# Answer:
+import csv
+
+def find_highest_price_product(file_path):
+    max_price = 0
+    top_product = None
+
+    with open(file_path, 'r') as csv_file:
+        csv_reader = csv.reader(csv_file)
+        header = next(csv_reader)  # Skip the header row
+        for row in csv_reader:
+            name, price = row
+            price = float(price)
+            if price > max_price:
+                max_price = price
+                top_product = name
+
+    return top_product, max_price
+
+file_path = input("Enter the path of the CSV file containing product information: ")
+product, price = find_highest_price_product(file_path)
+print(f"The product with the highest price is: {product} (Price: {price})")
