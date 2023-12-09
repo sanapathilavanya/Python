@@ -1,0 +1,15 @@
+# Challenge
+# Question:
+# Implement a program to check if a given string is an anagram of another string.
+# Print "Anagram" if it is, otherwise print "Not an anagram."
+
+# Answer:
+def is_anagram(str1, str2):
+    return sorted(str1) == sorted(str2)
+
+string1 = input("Enter the first string: ")
+string2 = input("Enter the second string: ")
+if is_anagram(string1, string2):
+    print("Anagram")
+else:
+    print("Not an anagram")
