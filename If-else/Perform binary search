@@ -1,0 +1,27 @@
+# Challenge
+# Question:
+# Implement a program to perform binary search on a sorted list.
+# Print the index of the target element if found, otherwise print "Not found."
+
+# Answer:
+def binary_search(sorted_list, target):
+    low, high = 0, len(sorted_list) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if sorted_list[mid] == target:
+            return mid
+        elif sorted_list[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+
+# Example sorted list, you can modify this for testing
+sorted_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+target_element = int(input("Enter the target element to search: "))
+search_result = binary_search(sorted_list, target_element)
+if search_result != -1:
+    print(f"The target element {target_element} is found at index {search_result}.")
+else:
+    print("Not found.")
