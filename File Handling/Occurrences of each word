@@ -1,0 +1,21 @@
+# Challenge
+# Question:
+# Implement a program that reads a text file and counts the occurrences of each word.
+# Print the word frequencies.
+
+# Answer:
+def count_word_occurrences(file_path):
+    word_counts = {}
+    with open(file_path, 'r') as file:
+        for line in file:
+            words = line.strip().split()
+            for word in words:
+                word = word.lower()
+                word_counts[word] = word_counts.get(word, 0) + 1
+    return word_counts
+
+file_path = input("Enter the path of the text file: ")
+word_occurrences = count_word_occurrences(file_path)
+print("Word frequencies:")
+for word, count in word_occurrences.items():
+    print(f"{word}: {count}")
