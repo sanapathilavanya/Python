@@ -1,0 +1,31 @@
+# Challenge
+# Question:
+# Write a program that reads a CSV file containing student information (name, age, grade).
+# Calculate the average grade and print the student with the highest grade.
+
+# Answer:
+import csv
+
+def analyze_student_data(file_path):
+    total_grades = 0
+    max_grade = 0
+    top_student = None
+
+    with open(file_path, 'r') as csv_file:
+        csv_reader = csv.reader(csv_file)
+        header = next(csv_reader)  # Skip the header row
+        for row in csv_reader:
+            name, age, grade = row
+            grade = float(grade)
+            total_grades += grade
+            if grade > max_grade:
+                max_grade = grade
+                top_student = name
+
+    average_grade = total_grades / (csv_reader.line_num - 1)
+    return average_grade, top_student, max_grade
+
+file_path = input("Enter the path of the CSV file: ")
+average, top_student, max_grade = analyze_student_data(file_path)
+print(f"Average Grade: {average}")
+print(f"Top Student: {top_student} (Grade: {max_grade})")
