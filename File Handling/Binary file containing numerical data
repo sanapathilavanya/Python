@@ -1,0 +1,36 @@
+# Challenge
+# Question:
+# Write a program that reads a binary file containing numerical data (floats).
+# Calculate the average and standard deviation of the numbers.
+# Print the results.
+
+# Answer:
+import struct
+import math
+
+def calculate_stats(binary_file_path):
+    total = 0
+    count = 0
+    with open(binary_file_path, 'rb') as binary_file:
+        while True:
+            data = binary_file.read(4)
+            if not data:
+                break
+            value = struct.unpack('f', data)[0]
+            total += value
+            count += 1
+
+    average = total / count
+
+    with open(binary_file_path, 'rb') as binary_file:
+        deviations = [struct.unpack('f', binary_file.read(4))[0] - average for _ in range(count)]
+
+    variance = sum(deviation**2 for deviation in deviations) / count
+    std_deviation = math.sqrt(variance)
+
+    return average, std_deviation
+
+file_path = input("Enter the path of the binary file: ")
+avg, std_dev = calculate_stats(file_path)
+print(f"Average: {avg}")
+print(f"Standard Deviation: {std_dev}")
