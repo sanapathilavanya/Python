@@ -1,0 +1,25 @@
+# Challenge
+# Question:
+# Implement a program that reads a JSON file containing information about books.
+# Print the titles of books published in a specific year.
+
+# Answer:
+import json
+
+def find_books_by_year(file_path, target_year):
+    titles = []
+
+    with open(file_path, 'r') as json_file:
+        books = json.load(json_file)
+        for book in books:
+            if 'year' in book and book['year'] == target_year:
+                titles.append(book['title'])
+
+    return titles
+
+file_path = input("Enter the path of the JSON file: ")
+target_year = int(input("Enter the target publication year: "))
+books_in_year = find_books_by_year(file_path, target_year)
+print(f"Books published in {target_year}:")
+for title in books_in_year:
+    print(title)
