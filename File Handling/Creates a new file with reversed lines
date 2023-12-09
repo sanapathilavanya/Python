@@ -1,0 +1,23 @@
+# Challenge
+# Question:
+# Implement a program that reads a text file and creates a new file with reversed lines.
+# Print the first few lines of the reversed file.
+
+# Answer:
+def reverse_lines(input_file_path, output_file_path):
+    with open(input_file_path, 'r') as input_file:
+        lines = input_file.readlines()
+
+    reversed_lines = [line.strip()[::-1] + '\n' for line in lines]
+
+    with open(output_file_path, 'w') as output_file:
+        output_file.writelines(reversed_lines)
+
+file_path = input("Enter the path of the input text file: ")
+output_path = input("Enter the path for the output reversed file: ")
+reverse_lines(file_path, output_path)
+
+with open(output_path, 'r') as reversed_file:
+    print("First few lines of the reversed file:")
+    for _ in range(5):
+        print(reversed_file.readline().strip())
