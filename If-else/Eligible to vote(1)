@@ -1,0 +1,10 @@
+# If-else
+# Question:
+# Determine if a person is eligible to vote based on their age. Print "Eligible" if they are, otherwise print "Not eligible."
+
+# Answer:
+age = int(input("Enter your age: "))
+if age >= 18:
+    print("Eligible to vote")
+else:
+    print("Not eligible to vote")
